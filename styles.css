@@ -1,0 +1,110 @@
+/* Applied to entire page */
+html {
+    text-align: center;
+    font-family: monospace;
+  }
+  
+  /* Wrapper ID */
+  #calc {
+    display: flex;
+      min-height: 95vh; /*viewport height*/
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden; /*spillage outside of calc div is hidden*/
+      background-color: teal;
+  }
+  
+  /* Buttons and display */
+  #container {
+      background-color: black;
+      border: 10px solid rgba(47,47,47,1);
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: repeat(4, 100px); /*column of 4 and repeat of 5 */
+      grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+      gap: 2px;
+  }
+  
+  /* Display */
+  #display {
+      grid-column: 1 / -1; /*grid column start and end*/
+      background-color: rgb(149, 198, 198);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end; /*digits on far flex end -far right edge*/
+      padding: 5px;
+      font-size: 5.5em;
+      font-weight: initial;
+      text-shadow: 1.3px 1.3px #383838;
+      margin: 5px;
+  }
+  
+  button {
+      margin: 1px;
+      border-radius: 5%;
+      border: none;
+      font-weight: initial;
+      font-size: 2em;
+      font-family: monospace;
+      color: black;
+  }
+  
+  #zero {
+      grid-column: span 2;
+  }
+  
+  .operator {
+      background-color: rgb(7, 147, 157);
+  }
+  
+  /*Attribute happens when clicked*/
+  .operator:focus {
+      background-color: peachpuff;
+  }
+  
+  .equals {
+      background-color: rgb(95, 221, 221);
+  }
+  
+  .equals:active {
+      background-color: #ffc183;
+  }
+  
+  /*Numbers*/
+  .operand {
+      background-color: #91a2b1;
+  }
+  
+  .operand:active {
+      background-color: peachpuff;
+  }
+  
+  .decimal {
+    background-color: #91a2b1;
+  }
+  
+  .decimal:active {
+      background-color: peachpuff;
+  }
+  
+  .clear {
+      background-color: #91a2b1;
+  }
+  
+  .clear:active {
+      background-color: #33b9bb;
+  }
+  
+  .sign {
+      background-color: #91a2b1;
+      grid-column: span 2;
+  }
+  
+  .sign:active {
+      background-color: #33b9bb;
+  }
+
+
